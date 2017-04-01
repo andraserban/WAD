@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Log In </title>
-	<meta name="description" content="Log In >
+	<title>Sport Items </title>
+	<meta name="description" content="Sport Items">
 	
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -17,17 +17,317 @@ integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/
 crossorigin="anonymous">
 </head>
  
-	
-</head>
+ <style>
+ 
+	@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext,vietnamese');   
+body{font-family: 'Quicksand', sans-serif;}
+   h4{
+    	font-weight: 600;
+	}
+	p{
+		font-size: 12px;
+		margin-top: 5px;
+	}
+	.price{
+		font-size: 30px;
+    	margin: 0 auto;
+    	color: #333;
+	}
 
+	.thumbnail{
+		opacity:0.70;
+		-webkit-transition: all 0.5s; 
+		transition: all 0.5s;
+	}
+	.thumbnail:hover{
+		opacity:1.00;
+		box-shadow: 0px 0px 10px #4bc6ff;
+	}
+	.line{
+		margin-bottom: 5px;
+	}
+	@media screen and (max-width: 770px) {
+		.right{
+			float:left;
+			width: 100%;
+		}
+	}
+	span.thumbnail {
+        border: 1px solid #00c4ff !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+	padding: 10px;
+}
+.container h4{margin-top:70px; margin-bottom:30px;}
+button {    margin-top: 6px;
+}
+.right {
+    float: right;
+    border-bottom: 2px solid #0a5971;
+}
+.btn-info {
+    color: #fff;
+    background-color: #19b4e2;
+    border-color: #19b4e2;
+	font-size:13px;
+	font-weight:600;
+}
+ </style>
 	
 
 <body>
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<! -- Navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+	<div class ="container">
+		<div class ="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a href="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\template.html" class="navbar-brand">Sport Items</a>
+		</div> <! -- Navbar header -->
+		<div class"collapse navbar-collapse" id="navbar-collapse">
+		<a href="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\logInPage.html" class="btn btn-info navbar-btn navbar-right">Log in</a>
+		<a href="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\shoppingCartPage.html" class="btn btn-info navbar-btn navbar-right">Shopping cart</a>
+			<ul class="nav navbar-nav">
+				<li><a href="#gallery">Gallery</a>
+				<li><a href="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\basketballPage.html">Basketball</a>
+				<li><a href="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\swimmingPage.html">Swimming</a>
+				<li><a href="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\yogaPage.html">Yoga</a>
+				<li><a href="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\pilatesPage.html">Pilates</a>
+				</li>
+			</ul>	
+		
+		</div>
+	</div> <! -- End container -->
+</nav> <! -- End Navbar -->
+
+<html lang="en">
+  
+	
+		<div class="container">
+		<h4>BASKETBALL</h4>
+	<div class="row">
+	
+    	<!-- BEGIN PRODUCTS -->
+  		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\costum.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		</div>
+  		
+  		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\costum1.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		</div>
+  		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\casca.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		</div>
+  		
+		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\casca1.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		</div>
+  		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\ochelari.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		</div>
+  		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\ochelari1.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		</div>
+  		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\dopuri.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		</div>
+		
+		<div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+      			<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\SwimmingProducts\dopuri1.jpg" alt="...">
+      			<h4>Product Tittle</h4>
+      			<div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+      			<p> </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > BUY ITEM</button>
+      				</div>
+      				
+      			</div>
+    		</span>
+  		
+
+		<!-- END PRODUCTS -->
+	</div>
+</div><!-------container----->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 crossorigin="anonymous"></script>
+
+  
 </body>	
 </html>
