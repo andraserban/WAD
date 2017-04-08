@@ -15,74 +15,302 @@ integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
 integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 crossorigin="anonymous">
+
+<title>Animated Vertical Carousel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	
+	<script>
+	
+		$(document).ready(function(){
+// invoke the carousel
+    $('#myCarousel').carousel({
+      interval:6000
+    });
+
+// scroll slides on mouse scroll 
+$('#myCarousel').bind('mousewheel DOMMouseScroll', function(e){
+
+        if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+            $(this).carousel('prev');
+			
+			
+        }
+        else{
+            $(this).carousel('next');
+			
+        }
+    });
+
+//scroll slides on swipe for touch enabled devices 
+
+ 	$("#myCarousel").on("touchstart", function(event){
+ 
+        var yClick = event.originalEvent.touches[0].pageY;
+    	$(this).one("touchmove", function(event){
+
+        var yMove = event.originalEvent.touches[0].pageY;
+        if( Math.floor(yClick - yMove) > 1 ){
+            $(".carousel").carousel('next');
+        }
+        else if( Math.floor(yClick - yMove) < -1 ){
+            $(".carousel").carousel('prev');
+        }
+    });
+    $(".carousel").on("touchend", function(){
+            $(this).off("touchmove");
+    });
+});
+    
+});
+//animated  carousel start
+$(document).ready(function(){
+
+//to add  start animation on load for first slide 
+$(function(){
+		$.fn.extend({
+			animateCss: function (animationName) {
+				var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+				this.addClass('animated ' + animationName).one(animationEnd, function() {
+					$(this).removeClass(animationName);
+				});
+			}
+		});
+			 $('.item1.active img').animateCss('slideInDown');
+			 $('.item1.active h2').animateCss('zoomIn');
+			 $('.item1.active p').animateCss('fadeIn');
+			 
+});
+	
+//to start animation on  mousescroll , click and swipe
+
+
+ 
+     $("#myCarousel").on('slide.bs.carousel', function () {
+		$.fn.extend({
+			animateCss: function (animationName) {
+				var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+				this.addClass('animated ' + animationName).one(animationEnd, function() {
+					$(this).removeClass(animationName);
+				});
+			}
+		});
+	
+// add animation type  from animate.css on the element which you want to animate
+
+		$('.item1 img').animateCss('slideInDown');
+		$('.item1 h2').animateCss('zoomIn');
+		$('.item1 p').animateCss('fadeIn');
+		
+		$('.item2 img').animateCss('pulse');
+		$('.item2 h2').animateCss('flash');
+		$('.item2 p').animateCss('fadeIn');
+		
+		$('.item3 img').animateCss('fadeInLeft');
+		$('.item3 h2').animateCss('fadeInDown');
+		$('.item3 p').animateCss('fadeIn');
+    });
+});
+
+	</script>
+	
 </head>
  
+ <style>
  
+	 html, body{
+    width:100%;
+    height:100%;
+    background-color:#fff;
+	font-family: 'Sansita', sans-serif;
+    }
+.carousel-inner,.carousel,.item,.container,.fill {
+  height:100%;
+  width:100%;
+  background-position:center center;
+  background-size:cover;
+}
+.slide-wrapper{display:inline;}
+.slide-wrapper .container{padding:0px;}
+
+/*------------------------------ vertical bootstrap slider----------------------------*/
+
+.carousel-inner> .item.next ,  .carousel-inner > .item.active.right{ transform: translate3d(0, 100%, 0); -webkit-transform: translate3d(0, 100%, 0); -ms-transform: translate3d(0, 100%, 0); -moz-transform: translate3d(0, 100%, 0); -o-transform: translate3d(0, 100%, 0);  top: 0;}
+.carousel-inner > .item.prev ,.carousel-inner > .item.active.left{ transform: translate3d(0,-100%, 0); -webkit-transform: translate3d(0,-100%, 0);  -moz-transform: translate3d(0,-100%, 0);-ms-transform: translate3d(0,-100%, 0); -o-transform: translate3d(0,-100%, 0); top: 0;}
+.carousel-inner > .item.next.left , .carousel-inner > .item.prev.right , .carousel-inner > .item.active{transform:translate3d(0,0,0); -webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);; -moz-transform:translate3d(0,0,0); -o-transform:translate3d(0,0,0); top:0;}
+
+/*------------------------------- vertical carousel indicators ------------------------------*/
+.carousel-indicators{
+position:absolute;
+top:0;
+bottom:0;
+margin:auto;
+height:20px;
+right:10px; left:auto;
+width:auto;
+}
+.carousel-indicators li{display:block; margin-bottom:5px; border:1px solid #00a199; }
+.carousel-indicators li.active{margin-bottom:5px; background:#00a199;}
+/*-------- Animation slider ------*/
+
+.animated{
+	animation-duration:3s;
+	-webkit-animation-duration:3s;
+	-moz-animation-duration:3s;
+	-ms-animation-duration:3s;
+	-o-animation-duration:3s;
+	visibility:visible;
+	opacity:1;
+	transition:all 0.3s ease;
+}
+.carousel-img{   
+	 display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+	}
+.item img{margin:auto;visibility:hidden; opacity:0; transition:all 0.3s ease;}
+.item1 .carousel-img img , .item1.active .carousel-img img{max-height:300px;}
+.item1.active .carousel-img img.animated{visibility:visible; opacity:1; transition:all 1s ease; animation-duration:2s; animation-delay:0.3s}
+.item .carousel-desc{color:#fff; text-align:center;}
+.item  h2{font-size:50px; animation-delay:1.5s;animation-duration:1s; }
+.item  p{animation-delay:2.5s;animation-duration:1s; width:50%; margin:auto;}
+
+.item2 .carousel-img img , .item2.active .carousel-img img{max-height:300px;}
+.item2.active .carousel-img img.animated{visibility:visible; opacity:1; transition:all 0.3s ease; animation-duration:3s; animation-delay:0.3s}
+.item2 h2 , item2.active h2{visibility:hidden; opacity:0; transition:all 5s ease;}
+.item2.active h2.animated{visibility:visible; opacity:1;  animation-delay:3s;}
+
+.item .fill{padding:0px 30px; display:table; }
+.item .inner-content{display: table-cell;vertical-align: middle;}
+.item3 .col-md-6{float:none; display:inline-block; vertical-align:middle; width:49%;}
+
+.item3.active .carousel-img img.animated{visibility:visible; opacity:1; transition:all 0.3s ease; animation-duration:2s; animation-delay:0.3s}
+.item3 h2 , item3.active h2{visibility:hidden; opacity:0; transition:all 5s ease; }
+.item.item3 .carousel-desc{text-align:left;}
+.item3.active h2.animated{visibility:visible; opacity:1;  animation-delay:1.5s}
+.item3 p , item3.active p{visibility:hidden; opacity:0; transition:all 5s ease; width:100%;  }
+.item3.active p.animated{visibility:visible; opacity:1;  animation-delay:2.5s;}
+
+@media(max-width:991px)
+{
+	.item .carousel-desc , .item.item3 .carousel-desc{text-align:center;}
+	.item .carousel-desc p {width:80%;}
+	.item3 .col-md-6{width:100%; text-align:center;}
+}
+@media(max-width:768px)
+{
+.item .carousel-img img, .item.active .carousel-img img{max-height:155px;}
+.item  h2{font-size:30px; margin-top:0px;}
+.item .carousel-desc p{width:100%; font-size:12px;}
+}
+@media(max-width:480px)
+{
+.item  h2{font-size:30px;}
+.item .carousel-desc p{width:100%;}
+}
+ 
+ </style>
 	
 
 <body>
+    <section class="slide-wrapper">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                 </ol>
 
-	
-	<div class="container">
-		<section>
-			
-			<div class = "carousel slide" id="screenshot-carousel" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#screenshot-carousel" data-slide-to="0" class="active"> </li>
-					<li data-target="#screenshot-carousel" data-slide-to="1"> </li>
-					<li data-target="#screenshot-carousel" data-slide-to="2"> </li>
-					<li data-target="#screenshot-carousel" data-slide-to="3"> </li>
-					
-				</ol>
-				<div class="carousel-inner">
-					<div class="item active">
-						<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\sportBenefits1.png" alt="Basketball"></img>
-							<div class="carousel-caption">
-								<h3>Basketball never stops.</h3>
-							</div>
-					</div> <!-- end item-->
-					
-					<div class="item">
-						<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\sportBenefits2.png" alt="swimming"></img>
-						
-						<div class="carousel-caption">
-								<h3>Life is better when you are swimming.</h3>
-							</div>
-						
-					</div> <!-- end item-->
-					
-					<div class="item">
-						<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\yoga.jpg" alt="yoga"></img>
-						
-						<div class="carousel-caption">
-								<h3>Yoga heals the soul.</h3>
-							</div>
-						
-					</div> <!-- end item-->
-					
-					<div class="item">
-						<img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\pilates.jpg" alt="pilates"></img>
-						
-						<div class="carousel-caption">
-								<h3>Pilates is my Happy Hour.</h3>
-							</div>
-						
-					</div> <!-- end item-->
-					
-				</div> <!-- end carousel-inner-->
-				
-				<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				</a>
-				
-				<a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
-			</div> <!-- end carousel-->
-			
-		</section>
-	</div> <!-- end container-->
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item item1 active">
+                        <div class="fill" style=" background-color:#48c3af;">
+                            <div class="inner-content">
+                                <div class="carousel-img">
+                                    <img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\sportBenefits\love-sport.png" alt="why" class="img img-responsive" />
+                                </div>
+                                <div class="carousel-desc">
 
+                                    <h2>WHY?</h2>
+                                    <p>
+										Physical exercise is good for mind, body and spirit. Furthermore, team sports are 
+										good for learning accountability, dedication, and leadership, 
+										among many other traits. Putting it all together by playing 
+										a sport is a winning combination.
+									
+									</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item2">
+                        <div class="fill" style="background-color:#b33f4a;">
+                            <div class="inner-content">
+                                <div class="carousel-img">
+                                    <img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\sportBenefits\sport.png" alt="teamWork" class="img img-responsive" />
+                                </div>
+                                <div class="carousel-desc">
+
+                                    <h2>Sports teach teamwork and help achieve goals</h2>
+                                    <p> 
+										Playing a sport requires a lot of time and energy. Some may think this would distract student-athletes from schoolwork.
+										However, the opposite is true. Sports require memorization, repetition and learning — skillsets 
+										that are directly relevant to classwork. Also, the determination and goal-setting skills sports
+										require can be transferred to the classroom.
+										Fighting for a common goal with a host of other players, coaches, managers and community members teaches 
+										you how to build a collective team synergy and effectively communicate
+										the best way to solve problems en route to a victory. This will be very helpful in life when encountering 
+										problems at work, at home, or in any arena.
+									
+									</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item3">
+                        <div class="fill" style="background-color:#7fc2f4;">
+                            <div class="inner-content">
+                                <div class="col-md-6">
+
+                                    <div class="carousel-img">
+                                        <img src="F:\Facultate ACE\AN III\Sem2\WAD\SportItems\sportBenefits\sportB.png" alt="health" class="img img-responsive" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 text-left">
+                                    <div class="carousel-desc">
+
+                                        <h2>Sports offer many health benefits, some less obvious. </h2>
+                                        <p>
+											Clearly, sports will improve your fitness and weight goals. However, they also encourage healthy
+											decisions such as not smoking or drinking and offer hidden health benefits such as a lower chance
+											of getting osteoporosis 
+											or breast cancer later in life. Also, a team counting on you to show up and work hard is plenty
+											of motivation for you to get to the gym day in and day out.
+										
+										</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
@@ -90,6 +318,5 @@ crossorigin="anonymous">
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 crossorigin="anonymous"></script>
 
-  
 </body>	
 </html>
