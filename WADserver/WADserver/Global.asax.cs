@@ -11,6 +11,17 @@ namespace WADserver
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+        public WebApiApplication()
+        {
+            try
+            {
+                this.BeginRequest += WebApiApplication_BeginRequest;
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -18,6 +29,16 @@ namespace WADserver
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+           
+        }
+
+        private void WebApiApplication_BeginRequest(object sender, EventArgs e)
+        {
+            if (this.Context.Request.HttpMethod.CompareTo("OPTIONS") == 0)
+            {
+                this.Context.Response.StatusCode = 200;
+                this.CompleteRequest();
+            }
         }
     }
 }

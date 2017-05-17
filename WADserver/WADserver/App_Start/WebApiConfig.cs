@@ -22,6 +22,7 @@ namespace WADserver
             );
             config.Formatters.Clear();
             config.Formatters.Add(new JsonMediaTypeFormatter());
+           // config.Filters.Add(new OptionsOverwriteFilter());
         }
     }
 }

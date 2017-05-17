@@ -6,25 +6,21 @@ function sportItemsAPI() {
 
     var baseURL = "localhost";
     var doAsyncGet = function (partialUrl) {
-        var authorityToken = $.cookie("sportItems_token");
+        var authorityToken = '';//$.cookie("sportItems_token");
         var fullUrl = baseURL + partialUrl;
         return $.ajax({
-            url: fullUrl,
-            headers: {
-                "Authority": authorityToken                
-            },
+            url: fullUrl,            
             dataType: "json"
         });
     };
 
     var doAsyncPost = function (partialURL, jsonDataToPost) {
-        var authorityToken = $.cookie("sportItems_token");
+        var authorityToken = '';//$.cookie("sportItems_token");
         var fullUrl = baseURL + partialURL;
         return $.ajax({
             url: fullUrl,
             type: "POST",
-            headers: {
-                "Authority": authorityToken,
+            headers: {               
                 "Content-Type":"application/json"
                 
             },
@@ -35,26 +31,23 @@ function sportItemsAPI() {
 
     var doAsyncDelete = function (partialURL)
     {
-        var authorityToken = $.cookie("sportItems_token");
+        var authorityToken = '';//$.cookie("sportItems_token");
         var fullUrl = baseURL + partialURL;
         return $.ajax({
             url: fullUrl,
             type: "DELETE",
-            headers: {
-                "Authority": authorityToken               
-            },            
+                        
             dataType: "json"
         });
     }
 
     var doAsyncPut = function (partialURL, jsonDataToPut) {
-        var authorityToken = $.cookie("sportItems_token");
+        var authorityToken = '';//$.cookie("sportItems_token");
         var fullUrl = baseURL + partialURL;
         return $.ajax({
             url: fullUrl,
             type: "PUT",
-            headers: {
-                "Authority": authorityToken,
+            headers: {               
                 "Content-Type": "application/json"
             },
             data: JSON.stringify(jsonDataToPut),            

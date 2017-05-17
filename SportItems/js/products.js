@@ -1,33 +1,34 @@
 function loadBasketball()
 {
-    var sportItemsAPI = new sportItemsAPI();
-    sportItemsAPI.setBaseURL("http://localhost:50311");
+    var sportsAPI = new sportItemsAPI();
+    sportsAPI.setBaseURL("http://localhost:50311");
 
-    sportItemsAPI.getAllBasketball().done(
+    sportsAPI.getAllBasketball().done(
         function (data){
             var htmlString = "";
             for(i = 0; i < data.length; i++){
 
-                if(data[i].Image == null){
+                if(data[i].image != null){
 
-                    if(data[i].PriductId == null){
+                    if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Basketball.html"><img src=' + data[i].Image + 'class="img-responsive"></a>'
+                        htmlString += '<a class="img" href="Basketball.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
                     }
                     
                 } 
             }
-            productBox.prepend(htmlString);
+            var newElement = $(htmlString);
+            $("#productsBox").prepend(newElement);
         }
     );
 }
 
 function loadSwimming()
 {
-    var sportItemsAPI = new sportItemsAPI();
-    sportItemsAPI.setBaseURL("http://localhost:50311");
+    var sportsAPI = new sportItemsAPI();
+    sportsAPI.setBaseURL("http://localhost:50311");
 
-    sportItemsAPI.getAllSwimming().done(
+    sportsAPI.getAllSwimming().done(
         function (data){
             var htmlString = "";
             for(i = 0; i < data.length; i++){
@@ -47,10 +48,10 @@ function loadSwimming()
 }
 function loadYoga()
 {
-    var sportItemsAPI = new sportItemsAPI();
-    sportItemsAPI.setBaseURL("http://localhost:50311");
+    var sportsAPI = new sportItemsAPI();
+    sportsAPI.setBaseURL("http://localhost:50311");
 
-    sportItemsAPI.getAllYoga().done(
+    sportsAPI.getAllYoga().done(
         function (data){
             var htmlString = "";
             for(i = 0; i < data.length; i++){
@@ -64,16 +65,17 @@ function loadYoga()
                     
                 } 
             }
-            productBox.prepend(htmlString);
+			var newElement = $(htmlString);
+            $("#productsBox").prepend(newElement);
         }
     );
 }
 function loadPilates()
 {
-    var sportItemsAPI = new sportItemsAPI();
-    sportItemsAPI.setBaseURL("http://localhost:50311");
+    var sportsAPI = new sportItemsAPI();
+    sportsAPI.setBaseURL("http://localhost:50311");
 
-    sportItemsAPI.getAllPilates().done(
+    sportsAPI.getAllPilates().done(
         function (data){
             var htmlString ="";
             for(i = 0; i < data.length; i++){

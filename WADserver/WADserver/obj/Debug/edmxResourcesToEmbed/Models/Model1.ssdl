@@ -12,12 +12,12 @@
     <Key>
       <PropertyRef Name="ProductId" />
     </Key>
-    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="productName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="productCategory" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="price" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="image" Type="image" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="UserTable">
     <Key>

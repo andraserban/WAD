@@ -110,9 +110,9 @@ button {    margin-top: 6px;
 <html lang="en">
   
 	
-		<div class="container">
+<div class="container">
 		<h4>BASKETBALL</h4>
-	<div class="row">
+	<div class="row" id="productsBox">
 	
     	<!-- BEGIN PRODUCTS -->
   		<div class="col-md-3 col-sm-6">
@@ -322,16 +322,14 @@ button {    margin-top: 6px;
 		<!-- END PRODUCTS -->
 	</div>
 	
-$(document).ready(function() {
-  loadBasketball();
-});
+
 </div><!-------container----->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+   
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -339,7 +337,14 @@ $(document).ready(function() {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 crossorigin="anonymous"></script>
+<script src="js/sportItemsAPI.js"></script>
+<script src="js/products.js"></script>
 
+<script>
+$(document).ready(function() {
+  loadBasketball();
+});
+</script>
   
 </body>	
 </html>

@@ -13,12 +13,12 @@
     <EntitySetMapping Name="ProductTables">
       <EntityTypeMapping TypeName="WADModel.ProductTable">
         <MappingFragment StoreEntitySet="ProductTable">
+          <ScalarProperty Name="image" ColumnName="image" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="productName" ColumnName="productName" />
           <ScalarProperty Name="productCategory" ColumnName="productCategory" />
           <ScalarProperty Name="price" ColumnName="price" />
           <ScalarProperty Name="description" ColumnName="description" />
-          <ScalarProperty Name="image" ColumnName="image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

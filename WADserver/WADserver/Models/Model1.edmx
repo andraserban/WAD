@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WADModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WADModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="OrderTable">
           <Key>
             <PropertyRef Name="OrderId" />
@@ -17,12 +17,12 @@
           <Key>
             <PropertyRef Name="ProductId" />
           </Key>
-          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="productName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="productCategory" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="price" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="image" Type="image" Nullable="false" />
+          <Property Name="image" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="UserTable">
           <Key>
@@ -70,8 +70,7 @@
             <End Role="OrderTable" EntitySet="OrderTable" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WADModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -94,7 +93,7 @@
           <Property Name="productCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="true" />
+          <Property Name="image" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="OrderTables" Relationship="Self.FK_OrderTable_ProductTable" FromRole="ProductTable" ToRole="OrderTable" />
         </EntityType>
         <EntityType Name="UserTable">
@@ -162,12 +161,12 @@
           <EntitySetMapping Name="ProductTables">
             <EntityTypeMapping TypeName="WADModel.ProductTable">
               <MappingFragment StoreEntitySet="ProductTable">
+                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="productName" ColumnName="productName" />
                 <ScalarProperty Name="productCategory" ColumnName="productCategory" />
                 <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="description" ColumnName="description" />
-                <ScalarProperty Name="image" ColumnName="image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
