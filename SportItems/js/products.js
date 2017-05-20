@@ -8,11 +8,11 @@ function loadBasketball()
             var htmlString = "";
             for(i = 0; i < data.length; i++){
 
-                if(data[i].image != null){
+              if(data[i].image != null && data[i].description !== null && data[i].price !==null && data[i].productName !==null){
 
                     if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Basketball.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
+                        htmlString +='<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
                     }
                     
                 } 
@@ -33,12 +33,12 @@ function loadSwimming()
             var htmlString = "";
             for(i = 0; i < data.length; i++){
 
-                if(data[i].image != null){
+                if(data[i].image != null && data[i].description !== null && data[i].price !==null && data[i].productName !==null){
 
                     if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Swimming.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
-										'<a href="Swimming.html">' + data[i].description + '</a>'
+                        htmlString +='<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
+										
                     }
                     
                 } 

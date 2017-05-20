@@ -107,6 +107,12 @@ function sportItemsAPI() {
         var putUrl = "/api/products/"+productData.id;
         return doAsyncPut(putUrl, productData);
     }
+	/*this.getUserByUserName = function (userName)
+    {
+        var apiURL = "/api/user/" + userName;
+        return doAsyncDelete(apiURL);
+    }*/
+	
 
     sportItemsAPI.instance = this;
 
