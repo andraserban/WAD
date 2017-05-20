@@ -33,16 +33,18 @@ function loadSwimming()
             var htmlString = "";
             for(i = 0; i < data.length; i++){
 
-                if(data[i].Image == null){
+                if(data[i].image != null){
 
-                    if(data[i].PriductId == null){
+                    if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Swimming.html"><img src=' + data[i].Image + 'class="img-responsive"></a>'
+                        htmlString += '<a class="img" href="Swimming.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
+										'<a href="Swimming.html">' + data[i].description + '</a>'
                     }
                     
                 } 
             }
-            productBox.prepend(htmlString);
+            var newElement = $(htmlString);
+            $("#productsBox").prepend(newElement);
         }
     );
 }
@@ -56,16 +58,16 @@ function loadYoga()
             var htmlString = "";
             for(i = 0; i < data.length; i++){
 
-                if(data[i].Image == null){
+                if(data[i].image != null){
 
-                    if(data[i].PriductId == null){
+                    if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Yoga.html"><img src=' + data[i].Image + 'class="img-responsive"></a>'
+                        htmlString += '<a class="img" href="Yoga.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
                     }
                     
                 } 
             }
-			var newElement = $(htmlString);
+            var newElement = $(htmlString);
             $("#productsBox").prepend(newElement);
         }
     );
@@ -77,19 +79,20 @@ function loadPilates()
 
     sportsAPI.getAllPilates().done(
         function (data){
-            var htmlString ="";
+            var htmlString = "";
             for(i = 0; i < data.length; i++){
 
-                if(data[i].Image == null){
+                if(data[i].image != null){
 
-                    if(data[i].PriductId == null){
+                    if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Pilates.html"><img src=' + data[i].Image + 'class="img-responsive"></a>'
+                        htmlString += '<a class="img" href="Pilates.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
                     }
                     
                 } 
             }
-            productBox.prepend(htmlString);
+            var newElement = $(htmlString);
+            $("#productsBox").prepend(newElement);
         }
     );
 }

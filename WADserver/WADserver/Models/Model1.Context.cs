@@ -10,9 +10,10 @@
 namespace WADserver.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class WADEntities : DbContext
     {
         public WADEntities()
@@ -28,5 +29,6 @@ namespace WADserver.Models
         public virtual DbSet<OrderTable> OrderTables { get; set; }
         public virtual DbSet<ProductTable> ProductTables { get; set; }
         public virtual DbSet<UserTable> UserTables { get; set; }
+        public IEnumerable<object> UserTable { get; internal set; }
     }
 }

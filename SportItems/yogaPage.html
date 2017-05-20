@@ -112,7 +112,7 @@ button {    margin-top: 6px;
 	
 		<div class="container">
 		<h4>YOGA</h4>
-	<div class="row">
+	<div class="row" id="productsBox">
 	
     	<!-- BEGIN PRODUCTS -->
   		<div class="col-md-3 col-sm-6">
@@ -340,7 +340,14 @@ button {    margin-top: 6px;
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 crossorigin="anonymous"></script>
+<script src="js/sportItemsAPI.js"></script>
+<script src="js/products.js"></script>
 
+<script>
+$(document).ready(function() {
+  loadYoga();
+});
+</script>
   
 </body>	
 </html>
