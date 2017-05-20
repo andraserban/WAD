@@ -23,11 +23,11 @@ namespace WADserver.Controllers
         }
         // GET: api/User/UserName/{userName}
 
-       /* [Route("api/User/{username}")]
+        [Route("api/User/{username}")]
         public IQueryable<UserTable> GetUserByUserName(string username)
         {
-            return db.UserTable.Where(p => string.Compare(p.userName, username, true) == 0);
-        }*/
+            return db.UserTables.Where(p => string.Compare(p.userName, username, true) == 0);
+        }
 
         // GET: api/User/5
         [ResponseType(typeof(UserTable))]
