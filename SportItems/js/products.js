@@ -5,20 +5,20 @@ function loadBasketball()
 
     sportsAPI.getAllBasketball().done(
         function (data){
-            var htmlString = "";
+            var result = "";
             for(i = 0; i < data.length; i++){
 
               if(data[i].image != null && data[i].description !== null && data[i].price !==null && data[i].productName !==null){
 
                     if(data[i].ProductId != null){
 
-                        htmlString +='<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
+                        result +='<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
                     }
                     
                 } 
             }
-            var newElement = $(htmlString);
-            $("#productsBox").prepend(newElement);
+            var finalElement = $(result);
+            $("#productsBox").prepend(finalElement);
         }
     );
 }
@@ -30,21 +30,21 @@ function loadSwimming()
 
     sportsAPI.getAllSwimming().done(
         function (data){
-            var htmlString = "";
+            var result = "";
             for(i = 0; i < data.length; i++){
 
                 if(data[i].image != null && data[i].description !== null && data[i].price !==null && data[i].productName !==null){
 
                     if(data[i].ProductId != null){
 
-                        htmlString +='<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
+                        result +='<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
 										
                     }
                     
                 } 
             }
-            var newElement = $(htmlString);
-            $("#productsBox").prepend(newElement);
+            var finalElement = $(result);
+            $("#productsBox").prepend(finalElement);
         }
     );
 }
@@ -55,20 +55,20 @@ function loadYoga()
 
     sportsAPI.getAllYoga().done(
         function (data){
-            var htmlString = "";
+            var result = "";
             for(i = 0; i < data.length; i++){
 
                 if(data[i].image != null){
 
                     if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Yoga.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
+                        result += '<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
                     }
                     
                 } 
             }
-            var newElement = $(htmlString);
-            $("#productsBox").prepend(newElement);
+            var finalElement = $(result);
+            $("#productsBox").prepend(finalElement);
         }
     );
 }
@@ -79,20 +79,20 @@ function loadPilates()
 
     sportsAPI.getAllPilates().done(
         function (data){
-            var htmlString = "";
+            var result = "";
             for(i = 0; i < data.length; i++){
 
                 if(data[i].image != null){
 
                     if(data[i].ProductId != null){
 
-                        htmlString += '<a class="img" href="Pilates.html"><img src="http://localhost:50311' + data[i].image + '" class="img-responsive"></a>'
+                        result += '<div class="col-md-3 col-sm-6"><span class="thumbnail"><img src="http://localhost:50311' + data[i].image +'" class="img-rounded">' +'<h4>'+ data[i].productName + '</h4>' +'<p>'+ data[i].description + '</p>' + '<hr class="line"><div class="row"><div class="col-md-6 col-sm-6"><p class="price"> ' + '$'+ data[i].price +'</p></div><div class="col-md-6 col-sm-6"></div></div></span></div>';
                     }
                     
                 } 
             }
-            var newElement = $(htmlString);
-            $("#productsBox").prepend(newElement);
+            var finalElement = $(result);
+            $("#productsBox").prepend(finalElement);
         }
     );
 }
