@@ -11,17 +11,16 @@ function validate(){
             if(data.length > 0){
                 if(data[0].Password == password)
                 {
-                    $.cookie("User", data[0].UserId, { expires : 10 });
 					alert ("Login successfully");
-					window.location = "template.html"; 
-					return false;
+					window.location.href = "template.html"; 
+					break;
                 }
                 else{
 					attempt --;
 					alert("You have left "+attempt+" attempt;");
 					if( attempt == 0){
 						 alert("Incorrect password");	
-						return false;
+						break;
 					}
 				}
 	
