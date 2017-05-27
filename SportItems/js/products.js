@@ -96,3 +96,21 @@ function loadPilates()
         }
     );
 }
+function addProduct(){
+    var sportsAPI = new sportItemsAPI();
+    sportsAPI.setBaseURL("http://localhost:50311");
+
+    var product = {
+        ProductName: $("#productname").val(),
+        ProductCategory: $("#productcategory").val(),
+        ProductPrice: $("#price").val(),
+        ProductDescription: $("#description").val(),
+        Price: $("#inputPrice").val(),
+    }
+
+    sportsAPI.addNewProduct(product).done(
+        function (data){
+            window.location.href = "template.html";
+        }
+    );
+}

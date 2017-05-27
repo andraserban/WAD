@@ -1,23 +1,54 @@
-var attempt = 3; // Variable to count number of attempts.
+function validateLogin(){
+    var sportsAPI = new sportItemsAPI();
+    sportsAPI.setBaseURL("http://localhost:50311");
 
-// Below function Executes on click of login button.
-function validate(){
-	var username = document.getElementById("username").value;
-	var password = document.getElementById("password").value;
-	if ( username == "andra" && password == "pass"){
-			alert ("Login successfully");
-			window.location = "template.html"; // Redirecting to other page.
-			return false;
-	}
-	else{
-		attempt --;// Decrementing by one.
-		alert("You have left "+attempt+" attempt;");
-// Disabling fields after 3 attempts.
-	if( attempt == 0){
-		document.getElementById("username").disabled = true;
-		document.getElementById("password").disabled = true;
-		document.getElementById("submit").disabled = true;
-		return false;
-	}
-	}
+    var username = $("#username").val();
+    var password = $("#password").val();
+	var attempt = 3; 
+
+    sportsAPI.getUserByUserName(username).done(
+        function (data) {
+            if(data.length > 0){
+                if(data[0].Password == password)
+                {
+					alert ("Login successfully");
+					window.location.href = "template.html"; 
+					
+                }
+                else{
+					attempt --;
+					alert("You have left "+attempt+" attempt;");
+					if( attempt == 0){
+						 alert("Incorrect password");	
+						
+					}
+				}
+	
+            }
+            else{
+                alert("User does not exist!");
+            }
+
+        }
+    );
+ 
+    
+}
+function RegisterUser(){
+    var sportsAPI = new sportItemsAPI();
+    sportsAPI.setBaseURL("http://localhost:50311");
+    var userInfo = {
+        userName : $("#username").val() ,
+        Email : $("#email").val() , 
+        Password : $("#password").val(),
+		Role: "user"
+       
+    }
+
+    sportsAPI.addNewUser(userInfo).done(
+        function (data){
+            window.location.href="template.html";
+        }
+    );
+ 
 }

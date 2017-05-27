@@ -110,10 +110,17 @@ function sportItemsAPI() {
 	this.getUserByUserName = function (userName)
     {
         var apiURL = "/api/user/" + userName;
-        return doAsyncDelete(apiURL);
+        return doAsyncGet(apiURL);
     }
 	
-
+	this.addNewUser = function (user) {
+        var postURL = "/api/user";
+        return doAsyncPost(postURL, user);
+    };
+	 this.addNewProduct = function (product) {
+        var postURL = "/api/products";
+        return doAsyncPost(postURL, product);
+    };
     sportItemsAPI.instance = this;
 
 }
