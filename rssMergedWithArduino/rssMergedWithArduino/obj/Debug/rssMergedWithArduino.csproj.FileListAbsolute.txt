@@ -1,0 +1,52 @@
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csprojResolveAssemblyReference.cache
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Form1.resources
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Properties.Resources.resources
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csproj.GenerateResource.Cache
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csproj.CoreCompileInputs.cache
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.exe.config
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.exe
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.pdb
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.exe
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.pdb
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.dll
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.SqlServer.dll
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.xml
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.SqlServer.xml
+F:\Facultate ACE\AN IV\Licenta\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Migrations.login.resources
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.exe.config
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.exe
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.pdb
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.dll
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.SqlServer.dll
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.xml
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.SqlServer.xml
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csprojResolveAssemblyReference.cache
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Form1.resources
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.LogInForm.resources
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Migrations.login.resources
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Properties.Resources.resources
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csproj.GenerateResource.Cache
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csproj.CoreCompileInputs.cache
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.exe
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.pdb
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Migrations.register.resources
+F:\Facultate ACE\AN IV\Licenta_backup\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.RegisterForm.resources
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.exe.config
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.exe
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\rssMergedWithArduino.pdb
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.dll
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.xml
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csprojResolveAssemblyReference.cache
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Form1.resources
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.LogInForm.resources
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Migrations.login.resources
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Migrations.register.resources
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Properties.Resources.resources
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.RegisterForm.resources
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csproj.GenerateResource.Cache
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.csproj.CoreCompileInputs.cache
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.exe
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.pdb
+C:\Users\Andra Serban\Documents\rssMergedWithArduino\rssMergedWithArduino\obj\Debug\rssMergedWithArduino.Migrations.statistic.resources
